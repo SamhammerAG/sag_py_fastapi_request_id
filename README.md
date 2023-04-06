@@ -19,7 +19,7 @@ This library provides a way to identify all log entries that belong to a single 
 
 ### Installation
 
-pip install sag_py_fastapi_request_id
+pip install sag-py-fastapi-request-id
 
 ### Add the middleware
 
