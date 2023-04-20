@@ -3,7 +3,9 @@ from typing import cast
 
 import pytest
 
-from sag_py_fastapi_request_id import RequestContextLoggingFilter, RequestIdLogRecord, request_context
+from sag_py_fastapi_request_id import request_context
+from sag_py_fastapi_request_id.models import RequestIdLogRecord
+from sag_py_fastapi_request_id.request_context_logging_filter import RequestContextLoggingFilter
 
 
 @pytest.fixture()

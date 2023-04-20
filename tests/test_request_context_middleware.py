@@ -1,7 +1,8 @@
 from starlette.applications import Starlette
 from starlette.types import Scope
 
-from sag_py_fastapi_request_id import RequestContextMiddleware, request_context
+from sag_py_fastapi_request_id import request_context
+from sag_py_fastapi_request_id.request_context_middleware import RequestContextMiddleware
 
 
 def test_call_no_request_id_for_lifespan() -> None:
