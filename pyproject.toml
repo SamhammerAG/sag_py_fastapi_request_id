@@ -7,9 +7,9 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-contextvars = ">=2.4"
-starlette = ">=0.13.2"
+python = "^3.8.2"
+contextvars = "^2.4"
+starlette = "^0.37.2"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "*"
