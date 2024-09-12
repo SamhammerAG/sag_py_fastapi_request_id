@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "sag-py-fastapi-request-id"
-version = "0.1.2"
+version = "1.0.0"
 description = "Adds an unique identifiert to fastapi requests"
 authors = ["Samhammer AG"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8.2"
+python = "^3.12"
 contextvars = "^2.4"
 starlette = "^0.37.2"
 
