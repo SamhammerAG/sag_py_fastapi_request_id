@@ -8,8 +8,8 @@ from sag_py_fastapi_request_id.models import RequestIdLogRecord
 from sag_py_fastapi_request_id.request_context_logging_filter import RequestContextLoggingFilter
 
 
-@pytest.fixture()
-def log_record() -> LogRecord:
+@pytest.fixture(name="log_record")
+def fixture_log_record() -> LogRecord:
     return LogRecord(name="", level=INFO, pathname="", lineno=0, msg="Hello, world!", args=(), exc_info=None)
 
 
