@@ -1,6 +1,7 @@
 from typing import Union, Any
 
 import pytest
+import pytest_asyncio
 from starlette.applications import Starlette
 from starlette.responses import JSONResponse
 from starlette.types import Scope
@@ -48,23 +49,25 @@ def test_call_request_id_for_http() -> None:
     assert len(request_context.get_request_id()) == 32
 
 
-@pytest.fixture
+@pytest_asyncio.fixture(loop_scope="function")
 async def receive() -> Any:
-    async def receive() -> dict[str, Union[bool, str, bytes]]:
+    async def _receive() -> dict[str, Union[bool, str, bytes]]:
         return {"type": "http.request", "body": b"", "more_body": False}
 
-    return receive
+    # Return the coroutine object
+    return _receive
 
 
-@pytest.fixture
+@pytest_asyncio.fixture(loop_scope="function")
 async def send() -> Any:
-    async def send(_: Any) -> None:
+    async def _send(_: Any) -> None:
         return
 
-    return send
+    # Return the coroutine object
+    return _send
 
 
-@pytest.mark.asyncio
+@pytest.mark.asyncio(loop_scope="function")
 async def test__call__(receive: Any, send: Any) -> None:
     # Arrange
     async def test_app(_: Any, receive: Any, send: Any) -> JSONResponse:
