@@ -1,2 +1,2 @@
 contextvars>=2.4
-starlette>=0.37.0
+starlette>=0.46.0
