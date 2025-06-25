@@ -11,7 +11,7 @@ with open("requirements-dev.txt", "r") as fin:
 
 setuptools.setup(
     name="sag-py-fastapi-request-id",
-    version="1.0.0",
+    version="1.0.1",
     description="Adds an unique identifiert to fastapi requests",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
