@@ -7,11 +7,7 @@ pytest-asyncio
 pytest-cov
 ruff
 
-# Toml and coverage temporarely fixes compatibility issues between coverage-lcov and coverage
-# see for details: https://github.com/theupdateframework/python-tuf/issues/2254
 coverage-lcov
-toml
-coverage
 
 mock
 types-mock
